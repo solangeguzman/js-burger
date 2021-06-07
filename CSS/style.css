@@ -1,0 +1,17 @@
+/*.box{
+    display: inline-block;
+}
+  */
+
+header{
+    background-color: rgb(202, 103, 32);
+    height: 80px;
+    text-align: center;
+   
+}
+
+.color{
+    background-color: rgb(214, 166, 186);
+    border: white solid ;
+}
+
