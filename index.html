@@ -8,77 +8,105 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Burger</title>
 </head>
-<body>
-    <div class="container">
-      <div class="header row mb-4">
-        <div class="col"> <h1>Create Your Burger</h1></div>
-      </div>
-      <div class="col">
-          <div>
-              <img src="./img/burguer-top.png" alt="burguer-top">
-          </div>
-      </div>
-      </header>
-    </div>
-<main>
-
-      <h3>Mio Nome</h3>
-      <div class="col-12">
-         <h4>Ingredients</h4>
-      </div>
-
-
-       <div class="row">
-          <div class="col-6">
-            <form class="col mb-3">
-              <span>Cheese  <input type="checkbox" name="Cheese" class="selectionFood" value="40">
-               <label for="Cheese">Add</label></span>
-            </form>
-            <form class="col mb-3">
-               <span >Egg  <input type="checkbox" name="Egg" class="selectionFood" value="60">
-               <label for="egg">Add</label></span>
-            </form>
-            <form class="col mb-3">
-               <div>Mustard  <input type="checkbox" name="Mustard" class="selectionFood" value="10">
-               <label for="Mustard">Add</label></div>
-            </form>
-          </div>
-       </div>
-        <div class="row">
-           <div class="col-6">
-              <form>
-                  <span>Tomato  <input type="checkbox" name="Tomato" class="selectionFood" value="10">
-                  <label for="Tomato">Tomato</label></span>
-          
-                  <span>Lattuce  <input type="checkbox" name="Lettuce" class="selectionFood" value="40">
-                  <label for="Lettuce">Add</label></span>
-         
-                  <div>Ketchup  <input type="checkbox" name ="Ketchup" class="selectionFood" value="20">
-                  <label for="Ketchup">Add</label></div>
-               </form>
-            </div>
+<body class="colorbody">
+  <div class="colorcont-1">
+   <header  >
+      <div class="row banner">
+        <div>
+            <h1>Create Your Burger</h1>
+            <img class="burger-top" src="./img/burger-top.png" alt="burger-top">
         </div>
-
+      </div>
+    </header>
     
-</main>
-    <footer>
-        <div class="row mb-5 discount">
-           <div class="col">
-               <div>Discount Coupon<input type="text" class="color" id="cupon"></div>
+<main>
+    <div class="Add-Margin">
+      <h3>Nome Hamburger:</h3>
+      <input type="text" id="nome-hamburger">
+      <div class="col-12">
+         <h5>Ingredients</h5>
+      </div>
+    
+    <div id="container">
+        <div class="split2">
+           <div>
+            <form>
+                 <br>
+                 <br>
+                 <img src="./img/cheese.svg" width="50" height="50" alt="cheese">
+                <span>Cheese</span>  
+                <input class="checkItems" type="checkbox" name="Cheese" id="Cheese" value="40"><span class="text-color">Add</span></input>
+                <label for="Cheese"></label>
+              </form>
+               <br>
+               <br>
+               <form>
+                  <img src="./img/fried-egg.svg" width="50" height="50" alt="egg">
+                 <span>Egg</span>  
+                 <input class="checkItems" type="checkbox" name="Egg" id="Egg" value="60"> <span class="text-color">    Add  </span> </input>
+                 <label for="egg"></label>
+               </form>
+               <br>
+                <br>
+                <form>
+                    <img src="./img/mustard.svg" width="50" height="50" alt="Mustard"> 
+                  <span>Mustard</span>
+                  <input class="checkItems"type="checkbox" name="Mustard" id="Mustard" value="10">  <span class="text-color"> Add</span></input>
+                  <label for="Mustard"></label>
+                </form>   
+           </div>
+           <div>
+                  <br>
+                  <br>
+                   <form>
+                        <img src="./img/tomato.svg" width="50" height="50" alt="tomato">
+                        <span>Tomato</span>
+                        <label for="Ketchup"></label>
+                        <input class="checkItems" type="checkbox" name="Tomato" id="Tomato"  value="10"><span class="text-color"> Add</span></input>
+                    </form>
+                    <br>
+                    <br>
+                     <form>
+                        <img src="./img/lettuce.svg" width="50" height="50" alt="lettuce">
+                         <span>lettuce</span> 
+                         <label for="Ketchup"></label>
+                         <input class="checkItems" type="checkbox" name="Lettuce" id="Lettuce"  value="40"><span class="text-color"> Add</span></input>
+                      </form>
+                    <br>
+                    <br>
+                       <form>
+                           <img src="./img/ketchup.svg" width="50" height="50" alt="Ketchup">
+                           <span>Ketchup</span>
+                           <label for="Ketchup"></label>
+                           <input class="checkItems" type="checkbox" name ="Ketchup" id="Ketchup"  value="20"><span class="text-color"> Add</span></input>
+                       </form>
+
            </div>
         </div>
-        <div class="row">
-            <div class="col-12"><div id="somma-totale"></div>
-            </div>
+        <div class="wide">
+             <div class="sconto">
+                 <br>
+                 <br>
+                 <form action="">
+                   <label for="coupon">Discount</label>
+                   <input type="text" name="coupon" id="coupon">
+                 </form>
+             </div>
+             <br>
+             <br>
+             <button id="pricetotal">calculate</button>
         </div>
-        <div class="row">
-            <div class="col">
-                <button type="button" id="calculate" class="position"><strong>calculate</strong></button>
-            </div> 
-        </div>
-        
-    </footer>
-     <script type="text/javascript" src="JS/script.js"></script>
+    </div>
+   </main>
+
+    <footer>
+         <div class="ft-sfondo">
+            <div id="yourPrice"></div>
+            <div id="prezzofinale"><h1>YOUR PRICE IS:</h1></div>
+            <script type="text/javascript" src="JS/script.js"></script>
+         </div>
+   </footer> 
+</div>
 
 </body>
 </html>

@@ -1,22 +1,19 @@
-var totPrice = document.getElementById('calculate');
-var resultPrice = document.getElementById('result-sum')
+var Price = document.getElementById('pricetotal');
+var resultPrice = document.getElementById('prezzofinale');
 
-totPrice.addEventListener('click', function () {
+Price.addEventListener('click', function () {
+    var totPrice = 0;
+    var checkItems = document.getElementsByClassName('checkItems');
+    var sconto = document.getElementById('coupon');
+    var priceNum=0;
 
-    var result = 0;
-
-    var SelectionFood = document.getElementByIdClassName('Food');
-    var discount = document.getElementByIdClassName('sconti');
-    var discountPrice = 0;
-    for (var i = 0; i< selectionFood.length; i++){
-        if (selectionFood[i].checked){
-           result += parseInt(Num[i].value)
-       
+    for (var i = 0; i < checkItems.length; i++){
+        if (checkItems[i].checked){
+           totPrice += parseInt(checkItems[i].value)
         }
-
     }
-    if (discount.value ===''){
-        discountPrice= parseInt(result/100*10);
+    if (sconto.value === "miaw"){
+        priceNum = parseInt(totPrice / 100 * 10);
     }
-    resultPrice.innerHTML = 'Your price is:' + (result-discountPrice);
+    resultPrice.innerHTML = '$' + (totPrice - priceNum)
 })
