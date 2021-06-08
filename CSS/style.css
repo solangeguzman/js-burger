@@ -60,6 +60,21 @@ div.wide {
 .text-color{
     color: red;
 }
+
+#pricetotal{
+    border: rgb(209, 142, 18) solid;
+    background-color: rgb(243, 154, 10);
+    color: black;
+    font-size: 20px;
+}
+
+#coupon{
+    border: pink solid 1px;
+    background-color: rgb(211, 159, 140);
+}
+.prezzofin{
+    color:white;
+}
 .ft-sfondo{
     background-color: rgb(190, 32, 72);
     height: 80px;
